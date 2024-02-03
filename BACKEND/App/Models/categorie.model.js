@@ -1,28 +1,28 @@
 const mongoose = require('mongoose');
 
-const LeadSchema = new mongoose.Schema({
-    Name: {
+const categorySchema = new mongoose.Schema({
+    category_id: {
         type: String,
         required: true,
     },
-    Email: {
+    name: {
         type: String,
         required: true,
     },
-    PhoneNo: {
+    segment: {
         type: String,
         required: true,
-    },
-    msg: {
-        type: String,
-        required: true,
-    },
+    }, 
     status: {
         type: Number,
         required: true,
         default:0
     },
-    
+     CID: {
+        type: String,
+        required: true,
+ 
+    },
     createdAt: {
         type: Date,
         default: Date.now
@@ -33,5 +33,5 @@ const LeadSchema = new mongoose.Schema({
     _id: true,
 });
 
-const Leads = mongoose.model('lead', LeadSchema);
-module.exports = Leads;
+const categorys = mongoose.model('category', categorySchema);
+module.exports = categorys;

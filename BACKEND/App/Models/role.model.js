@@ -1,33 +1,28 @@
 const mongoose = require('mongoose');
 
-const BlogSchema = new mongoose.Schema({
-    BlogName: {
+const roleSchema = new mongoose.Schema({
+    role: {
         type: String,
         required: true,
+        unique: true
     },
-    Blog: {
+     name: {
         type: String,
         required: true,
+        unique: true
     },
-    BlogImg: {
+    description: {
         type: String,
-        required: true,
+        required: true
     },
-    status: {
-        type: Number,
-        required: true,
-        default:0
-    },
-    
     createdAt: {
         type: Date,
         default: Date.now
     }
-    
-}, {
+},{
     // This enables Mongoose to handle the _id field automatically
     _id: true,
-});
+  });
 
-const Blogs = mongoose.model('blogs', BlogSchema);
-module.exports = Blogs;
+const Role = mongoose.model('Roles', roleSchema);
+module.exports = Role;

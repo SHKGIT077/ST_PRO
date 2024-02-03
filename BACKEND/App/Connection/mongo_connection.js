@@ -5,7 +5,7 @@ const mongoose = require("mongoose");
 const db_connect = process.env.MONGO_URI;
 
 mongoose.connect(db_connect, {
-    useNewUrlParser: true,
+  useNewUrlParser: true,
   useUnifiedTopology: true,
   dbName: process.env.DB_NAME,
 });
@@ -13,7 +13,7 @@ mongoose.connect(db_connect, {
 const connection = mongoose.connection;
 
 connection.on("error", (error) => {
-  console.error("MongoDB Connection Error:", error);
+  console.log("MongoDB Connection Error:", error);
 });
 
 connection.once("open", () => {
