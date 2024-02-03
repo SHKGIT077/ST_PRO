@@ -45,38 +45,32 @@ require("./App/Routes")(app)
 
 
 // EMERGANCY
-require("./App/Emergency Apis/service")(app)
-require("./App/Emergency Apis/getOptionSymbols")(app)
 //require("./request")(app)
 
 
 
-
-
-
-
 //  ----------------------------   for help center ------------------
-const io = socketIo(server, {
-  cors: {
-    origin: "*",
-    credentials: true
-  }
-}
-);
+// const io = socketIo(server, {
+//   cors: {
+//     origin: "*",
+//     credentials: true
+//   }
+// }
+// );
 
-io.on("connection", (socket) => {
-  console.log(`a user connected with id ${socket.id}`);
+// io.on("connection", (socket) => {
+//   console.log(`a user connected with id ${socket.id}`);
 
   
-  socket.on("help_from_client", (data) => {
-    socket.broadcast.emit("test_msg_Response", data);
-  });
+//   socket.on("help_from_client", (data) => {
+//     socket.broadcast.emit("test_msg_Response", data);
+//   });
 
-  socket.on("logout_user_from_other_device_req", (data111) => {
-    socket.broadcast.emit("logout_user_from_other_device_res", data111);
-  });
+//   socket.on("logout_user_from_other_device_req", (data111) => {
+//     socket.broadcast.emit("logout_user_from_other_device_res", data111);
+//   });
 
-})
+// })
 
 
 

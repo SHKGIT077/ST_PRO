@@ -6,11 +6,12 @@ const dbName = process.env.DB_NAME;
 
 // MongoDB Connection
 async function connectToDatabase() {
+   
     const client = new MongoClient(mongoURI, { useNewUrlParser: true, useUnifiedTopology: true });
     await client.connect();
     return client.db(dbName);
 }
-
+ 
 async function DashboardView() {
     try {
         // Establish MongoDB connection using connectToDatabase() function
