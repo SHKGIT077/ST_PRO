@@ -1,0 +1,137 @@
+{
+	"info": {
+		"_postman_id": "4cae2d48-27b0-4cf4-97b2-a3df0f8d7be3",
+		"name": "Ganpat",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23957053",
+		"_collection_link": "https://lunar-robot-162771.postman.co/workspace/756876a6-48b1-4ad4-ab0f-f5cf9353b6e5/collection/23957053-4cae2d48-27b0-4cf4-97b2-a3df0f8d7be3?action=share&source=collection_link&creator=23957053"
+	},
+	"item": [
+		{
+			"name": "Get Blogs",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/get/blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"get",
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Get Leads",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:6000/get/leads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"get",
+						"leads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Blogs",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"BlogName\": \"KIKA\",\r\n    \"Blog\": \"Blog\",\r\n    \"BlogImg\": \"BlogImg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/add/blog",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"add",
+						"blog"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add Leads",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"Name\": \" Name\",\r\n    \"Email\": \" Email\",\r\n    \"PhoneNo\": \" PhoneNo\",\r\n    \"msg\": \"msg\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/add/leads",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"add",
+						"leads"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n\"Email\":\"admin@gmail.com\",\r\n\"Password\":\"admin@12345\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:6000/login",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "6000",
+					"path": [
+						"login"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
